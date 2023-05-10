@@ -26,8 +26,7 @@ git commit -m "<JIRA-ISSUE>: Title" -m "Description"
 7. Before Pushing Update Main
 ```
 git checkout main
-git fetch upstream
-git rebase upstream/main
+git fetch && git rebase
 git push origin main --no-verify
 ```
 
@@ -43,6 +42,10 @@ git push origin <branch> --force-with-lease
 9. Open github link
 10. Click the Compare & pull request button
 11. Click Create pull request to open a new pull request
+12. After changes have been approved, update main branch
+```
+git fetch && git rebase
+```
 
 ## Useful Commands
 
