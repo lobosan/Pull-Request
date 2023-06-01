@@ -30,9 +30,14 @@ git fetch && git rebase
 git push origin main --no-verify
 ```
 
-8. Push Branch
+8. Squash and Push Branch
 ```
 git checkout <branch>
+// Squash all commits
+git reset --soft main
+git add .
+git commit -m "Commit message"
+// Or squash specific commits
 git rebase -i main (peak 1st, squash others, then # comments)
 git push origin <branch> --force-with-lease
 --- If there are new commits to branch then
